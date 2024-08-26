@@ -1,0 +1,186 @@
+
+<html><head><base href="https://whitelist.miplix.tg">
+<title>Холдеры NFT DD</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+  }
+  h1 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+  }
+  .description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .btn:hover {
+    background-color: #45a049;
+  }
+  .holder-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  .holder-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+  }
+  .holder-item:hover {
+    background-color: #f9f9f9;
+  }
+  .holder-address {
+    color: #0066cc;
+    font-weight: bold;
+  }
+  .holder-balance {
+    color: #009900;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Холдеры NFT DD</h1>
+    <p class="description">Вы сможете получать дроп Darai за владение NFT DD</p>
+    <a href="https://miplix.github.io/dd-yup/" class="btn">Попасть на раздачу</a>
+    <ul class="holder-list" id="holderList"></ul>
+  </div>
+
+<script>
+const whitelistedAddresses = [
+  'miplix.tg', 'yarsib.tg', 'se_la_via.tg', 'dgr_134.tg', 'nikkimalita.tg',
+  'zefirinochka.tg', 'uliana2024.near', 'alexsun1331.tg', 'alexn_450.tg',
+  'maximus159rus.tg', 'vadart1985.tg', '1221478238.tg', 'bboyboychik.tg',
+  'artem_lesun.tg', 'i5177589503.tg', 'happy1111.near', 'brovick.near',
+  'x_katana_x.tg', '5360269598.tg', 'tiger3709.tg', 'macho928382.tg',
+  'gavrilova_m.tg', 'psixozzz56.tg', 'roman_prof_vlp.tg', 'progrech.tg',
+  'who291.tg', 'n_stasyaaa.tg', 'barmousson.tg', 'den4ik138g.tg',
+  'kantakt_by.tg', 'lerka886.tg', 'elena_pavlova_p.tg', 'tairwin-hot3.tg',
+  'rad260.tg', 'akuka85.tg', 'ixpycti.tg', 'faxri6815.tg', 'irinka76surikova.tg',
+  'sergeyodessite.tg', 'igalaxy776.tg', 'evgeniyamal.tg', 'timur9627.tg',
+  'lomantinrus.tg', 'romann0711.tg', 'kolibry8.tg', 'anandradragon.tg',
+  'mr_bruts.tg', 'mish1989.tg', 'lego089.near', 'zlvert.tg', 'kosmos22221.tg',
+  'me4enyi.near', 'zazoliko.near', 'kitaecjack.tg', 'oleksiiskryl.tg',
+  'dronebaron.tg', 'investion_s.tg', 'dimson3.tg', 'ex3dex.tg', 'den4ik13113.tg',
+  'power_of_natur.tg', 'by_demon_f.tg', 'antmazaj-hot.tg', 'ya_toge_zdes.tg',
+  'edeneshka.tg', 'nonnashev.tg', 'mot1411.tg', 'primera02.tg', '1843351745.tg',
+  'pskoob.tg', 'i462506025.tg', 'i5122105808.tg', 'albertych444.tg', 'rossya.tg',
+  'so1omun.tg', 'andreu2garin.tg', 'vasiliy_balabanov.tg', 'well076.tg'
+];
+
+const data = {
+  "data": {
+    "near": {
+      "collection_holders": [
+        {
+          "current_holdings": 1,
+          "owner": "miplix.tg"
+        },
+        {
+          "current_holdings": 425,
+          "owner": "leexanonis.tg"
+        },
+        {
+          "current_holdings": 378,
+          "owner": "doubledog.hot.tg"
+        },
+        {
+          "current_holdings": 216,
+          "owner": "sedenal.tg"
+        },
+        {
+          "current_holdings": 170,
+          "owner": "romanf2020.tg"
+        },
+        {
+          "current_holdings": 73,
+          "owner": "mr_bruts.tg"
+        },
+        {
+          "current_holdings": 60,
+          "owner": "yarsib.tg"
+        },
+        {
+          "current_holdings": 48,
+          "owner": "amir_q8.tg"
+        },
+        {
+          "current_holdings": 34,
+          "owner": "jerosillone.tg"
+        },
+        {
+          "current_holdings": 33,
+          "owner": "i618001448.tg"
+        }
+      ]
+    }
+  }
+};
+
+function renderHolderList() {
+  const holderList = document.getElementById('holderList');
+  const filteredHolders = data.data.near.collection_holders.filter(holder => 
+    whitelistedAddresses.includes(holder.owner)
+  );
+
+  filteredHolders.forEach(holder => {
+    const listItem = document.createElement('li');
+    listItem.className = 'holder-item';
+    listItem.innerHTML = `
+      <span class="holder-address">${holder.owner}</span>
+      <span class="holder-balance">${holder.current_holdings}</span>
+    `;
+    holderList.appendChild(listItem);
+  });
+
+  // Add whitelisted addresses that are not in the collection_holders
+  whitelistedAddresses.forEach(address => {
+    if (!filteredHolders.some(holder => holder.owner === address)) {
+      const listItem = document.createElement('li');
+      listItem.className = 'holder-item';
+      listItem.innerHTML = `
+        <span class="holder-address">${address}</span>
+        <span class="holder-balance">0</span>
+      `;
+      holderList.appendChild(listItem);
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderHolderList);
+</script>
+</body>
+</html>
